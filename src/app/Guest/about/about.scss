@@ -1,0 +1,57 @@
+.sidebar button {
+  text-align: left;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+}
+
+.sidebar button:hover {
+  transform: translateX(4px);
+}
+
+.content {
+  line-height: 1.7;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+.vision-mission {
+  background-color: #ffffff;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.vision-mission:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background-color: #0d6efd;
+  border-radius: 3px;
+}
+
+.vision-mission h5 {
+  border-left: 4px solid #0d6efd;
+  padding-left: 10px;
+}
+
+.vision-mission p {
+  color: #555;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+.badge.bg-primary-subtle {
+  background-color: rgba(13, 110, 253, 0.1);
+  font-weight: 500;
+}
+
+.badge.bg-primary-subtle:hover {
+  background-color: #0d6efd;
+  color: #fff;
+  transition: 0.3s;
+}

@@ -1,0 +1,29 @@
+#team .card {
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+#team .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+#team img {
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#team .card-body {
+  padding: 1.5rem;
+}
+
+#team h5 {
+  margin-bottom: 0.4rem;
+}
+
+#team p.text-muted {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}

@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carmel Coprate Educational Agency - Career Application Form</title>
+  </head>
+  <body>
+    <!-- Personal Details -->
+    <form [formGroup]="personaldetailsform" enctype="multipart/form-data">
+      <div class="form-section" style="margin-top: 80px">
+        <div class="section-header">
+          Carmel Coprate Educational Agency - Career - Application Form - Personal Details
+        </div>
+        <div class="form-body">
+          <p>
+            <b>*</b> Make sure that the data given is correct and valid. Once submitted the data
+            cannot be changed.
+          </p>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Apply For*</label>
+              <select formControlName="typeid">
+                <option>......Select......</option>
+                <option *ngFor="let data of TypeArray" [value]="data.typeid">
+                  {{ data.typename }}
+                </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Designation</label>
+              <select formControlName="designation">
+                <option>--Select--</option>
+                <option *ngFor="let data of DesignationArray" [value]="data.designationid">
+                  {{ data.designationname }}
+                </option>
+              </select>
+            </div>
+            <!-- <div class="form-group">
+                <label>Subject</label>
+                <select><option>--Select--</option></select>
+            </div> -->
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name*</label
+              ><input type="text" formControlName="name" placeholder="First name" />
+            </div>
+            <div class="form-group">
+              <label>Date of Birth*</label><input type="date" formControlName="dob" />
+            </div>
+            <div class="form-group">
+              <label>Gender*</label
+              ><select formControlName="gender">
+                <option >--Select--</option>
+                <option value="male">Male</option>
+                <option value="Female">Female</option>
+                 <option value="Other">Female</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Marital Status*</label
+              ><select formControlName="maritulstatus">
+                <option>--Select--</option>
+                <option value="1">Single</option>
+                <option value="2">Married</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>E-Mail*</label
+              ><input type="email" placeholder="E-Mail" formControlName="email" />
+            </div>
+            <div class="form-group">
+              <label>Mobile No.*</label
+              ><input type="text" placeholder="Applicant Mobile No." formControlName="mobno" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Religion*</label
+              ><select formControlName="religion">
+                <option>--Select--</option>
+                <option value="1">Hindu</option>
+                <option value="2">Christain</option>
+                <option value="3">Muslim</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>State*</label><input type="text" placeholder="State" formControlName="state" />
+            </div>
+            <div class="form-group">
+              <label>Country*</label
+              ><input type="text" placeholder="Country" formControlName="country" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Qualification Details -->
+      <div class="form-section">
+        <div class="section-header">
+          Carmel Coprate Educational Agency - Career - Application Form - Qualification Details
+        </div>
+        <div class="form-body">
+          <div class="form-row">
+            <div class="form-group">
+              <label>K TET Qualified</label>
+              <select formControlName="ktet">
+                <option value="">--Select--</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>k-Tet Category</label>
+              <select formControlName="category">
+                <option>--Select--</option>
+                <option value="1">Category 1</option>
+                <option value="2">Category 2</option>
+                <option value="3">Category 3</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Qualification*</label
+              ><input type="text" placeholder="Secondary School" formControlName="qualification" />
+            </div>
+            <div class="form-group">
+              <label>Institution Name*</label
+              ><input type="text" placeholder="School Name" formControlName="Schoolname" />
+            </div>
+            <div class="form-group">
+              <label>Institution Place*</label
+              ><input type="text" placeholder="School Place" formControlName="Schoolplace" />
+            </div>
+            <div class="form-group">
+              <label>Board / University*</label
+              ><input type="text" placeholder="Board" formControlName="Board" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <input
+                type="text"
+                placeholder="Plus Two / Pre Degree (with stream)"
+                formControlName="plustwo"
+              />
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Institution Name" formControlName="Institutionname" />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                placeholder="Institution Place"
+                formControlName="Institutionplace"
+              />
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Board/University" formControlName="university" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" placeholder="UG (Eg: BSc Mathematics)" formControlName="ug" />
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="College Name" formControlName="Collegename" />
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="College Place" formControlName="Collegeplace" />
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="University" formControlName="university1" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" placeholder="PG (Eg: MSc Mathematics)" formControlName="pg" />
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="College Name" formControlName="Collegename2" />
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="College Place" formControlName="Collegeplace2" />
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="University" formControlName="university2" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" placeholder="Additional (Eg: MPhil/PhD)" formControlName="phd" />
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Institute Name" formControlName="Institutename" />
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Institute Place" formControlName="Instituteplace" />
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="University" formControlName="University3" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience Details -->
+      <div class="form-section">
+        <div class="section-header">
+          Carmel Coprate Educational Agency - Career - Application Form - Experience Details
+        </div>
+        <div class="form-body">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Experience</label>
+              <select formControlName="exp">
+                <option>--Select--</option>
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Total Experience - Years</label
+              ><input type="number" min="0" value="0" formControlName="expy" />
+            </div>
+            <div class="form-group">
+              <label>Total Experience - Months</label
+              ><input type="number" min="0" value="0" formControlName="totalexp" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Last Worked*</label
+              ><input
+                type="text"
+                placeholder="Institute Name & Place"
+                formControlName="lastworked"
+              />
+            </div>
+            <div class="form-group">
+              <label>From*</label><input type="date" formControlName="fromdate" />
+            </div>
+            <div class="form-group">
+              <label>To*</label><input type="date" formControlName="todate" />
+            </div>
+            <div class="form-group">
+              <label>Reason for break*</label
+              ><input type="text" placeholder="Reason" formControlName="reason" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- File Uploads -->
+      <div class="form-section">
+        <div class="section-header">
+          Carmel Coprate Educational Agency - Career - Application Form - File Uploads
+        </div>
+        <div class="form-body">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Resume* <small>Max. File Size: 1 MB (pdf)</small></label
+              ><input
+                type="file"
+                accept=".pdf"
+                formControlName="productimage"
+                (change)="selectFile($event)"
+              />
+            </div>
+            <div class="form-group">
+              <label>Photo* <small>Max. Photo Size 2 MB</small></label
+              ><input
+                type="file"
+                accept="image/*"
+                formControlName="productimage1"
+                (change)="selectFile1($event)"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div class="submit-box">
+        <button type="submit" (click)="onSubmit()">Submit</button>
+        <div class="note">Note: This portal is best optimized for laptops and desktops.</div>
+      </div>
+    </form>
+  </body>
+</html>

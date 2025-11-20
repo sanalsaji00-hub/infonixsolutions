@@ -1,0 +1,130 @@
+<form [formGroup]="reportformgroup" (ngSubmit)="OnSubmit()">
+  <div class="card search-card shadow border-0 rounded-4 p-4">
+    <div class="row g-3 align-items-start">
+      <!-- From Date -->
+      <div class="col-lg-2 col-md-3 col-sm-6">
+        <label class="form-label fw-semibold">From Date</label>
+        <input
+          type="date"
+          formControlName="startdate"
+          class="form-control form-control-custom"
+        />
+      </div>
+
+      <!-- To Date -->
+      <div class="col-lg-2 col-md-3 col-sm-6">
+        <label class="form-label fw-semibold">To Date</label>
+        <input
+          type="date"
+          formControlName="enddate"
+          class="form-control form-control-custom"
+        />
+      </div>
+
+      <!-- Designation -->
+      <div class="col-lg-2 col-md-3 col-sm-6">
+        <label class="form-label fw-semibold">Filter by Designation</label>
+        <select
+          
+          formControlName="typeid"
+          class="form-select form-select-custom"
+        >
+          <option value="">-- All --</option>
+          <option *ngFor="let data of typeArray" [value]="data.designationid">
+            {{ data.designationname }}
+          </option>
+        </select>
+      </div>
+
+      <!-- Gender -->
+      <div class="col-lg-2 col-md-3 col-sm-6">
+        <label class="form-label fw-semibold">Gender</label>
+        <select formControlName="gender" class="form-select form-select-custom">
+          <option value="">-- All --</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+
+      <!-- Category -->
+      <div class="col-lg-2 col-md-3 col-sm-6">
+        <label class="form-label fw-semibold">K-Tet Category</label>
+        <select formControlName="category" class="form-select form-select-custom">
+          <option value="">-- All --</option>
+          <option value="1">Category 1</option>
+          <option value="2">Category 2</option>
+          <option value="3">Category 3</option>
+          <!-- <option *ngFor="let data of fulldata" [value]="data.personalid">
+            {{ data.category }}
+          </option> -->
+        </select>
+      </div>
+
+      <!-- Search Button -->
+      <div class="col-lg-2 col-md-3 col-sm-6 d-flex align-items-center justify-content-end">
+        <button type="submit" class="btn btn-primary btn-primary-custom">
+          <span class="me-2">🔍</span> Search
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<!-- Results table — keep your same design -->
+<!-- (no changes needed) -->
+
+  <!-- 🔹 Results Table -->
+  <div class="card results-card mt-5 shadow border-0 rounded-4">
+    <div class="card-header results-header text-white text-center fw-semibold">
+      Search Results
+    </div>
+
+    <div class="card-body p-0">
+      <div class="table-responsive">
+        <table
+          class="table table-hover table-bordered align-middle text-center mb-0"
+          style="border:1px solid #dee2e6;"
+        >
+          <thead class="results-thead">
+            <tr>
+              <th>#</th>
+              <th>Full Name</th>
+              <th>Email</th>
+               <th>Contact No</th>
+              <th>Applied For</th>
+              <th>Date</th>
+              <th>Resume</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of reportdetails; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ data.fullname }}</td>
+              <td>{{ data.email }}</td>
+              <td>{{ data.mobno }}</td>
+              <td>{{ data.designationname }}</td>
+              <td>{{ data.currentdate | date: 'yyyy-MM-dd' }}</td>
+              <td>
+                <a
+                  [href]="'http://localhost:3000/images/' + data.resume"
+                  target="_blank"
+                  class="btn btn-sm btn-resume"
+                >
+                  View
+                </a>
+              </td>
+            </tr>
+
+            <!-- No Data Message -->
+            <tr *ngIf="!reportdetails || reportdetails.length === 0">
+              <td colspan="7" class="text-muted py-3 no-data">
+                No resumes found in this range.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+<!-- </div> -->
+

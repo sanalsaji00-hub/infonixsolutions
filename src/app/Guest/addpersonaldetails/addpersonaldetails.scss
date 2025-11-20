@@ -1,0 +1,96 @@
+// <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #e6e6e6;
+        margin: 0;
+        padding: 0;
+    }
+
+    .form-section {
+        background: #fff;
+        border: 1px solid #d1d1d1;
+        margin: 20px auto;
+        width: 90%;
+        max-width: 1000px;
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .section-header {
+        background-color: #360aea;
+        color: white;
+        padding: 8px 15px;
+        font-weight: bold;
+    }
+
+    .form-body {
+        padding: 20px;
+    }
+
+    .form-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    .form-group {
+        flex: 1;
+        min-width: 200px;
+        margin: 5px 10px;
+    }
+
+    label {
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 4px;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 6px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    input[type="file"] {
+        border: none;
+    }
+
+    input[type="date"] {
+        padding: 5px;
+    }
+
+    .note {
+        text-align: center;
+        font-size: 13px;
+        color: red;
+        margin-top: 10px;
+    }
+
+    .submit-box {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .submit-box button {
+        background-color: #0e2df7;
+        border: none;
+        padding: 8px 25px;
+        color: white;
+        font-weight: bold;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .submit-box button:hover {
+        background-color: #6e06f6;
+    }
+
+    @media (max-width: 768px) {
+        .form-group {
+            flex: 100%;
+        }
+    }
+// </style>
